@@ -1,13 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
     buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
 
     defaultConfig {
         applicationId "com.mobiquity.gradletemplate"
-        minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
-        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
         versionCode 1
         versionName "1.0"
     }
@@ -36,6 +33,16 @@ android {
     }
 
     productFlavors {
+        classic {
+            minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
+            targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+            compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+        }
+        lpreview {
+            minSdkVersion 'L'
+            targetSdkVersion 'L'
+            compileSdkVersion 'android-L'
+        }
     }
 
     packagingOptions {
