@@ -24,4 +24,4 @@ Configuration for Jacoco code coverage testing
 
 * Setup for Jacoco can be found in the scripts folder
 * Jacoco test coverage can be run with <code>./gradlew jacocoTestReport</code>
-* Results of jacoco code coverage testing: app/build/outputs/reports/androidTests/connected/index.html
+* Results of jacoco code coverage testing: app/build/test-report/jacocoTestReport/html/index.html
