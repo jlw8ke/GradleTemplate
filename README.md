@@ -1,4 +1,5 @@
-# GradleTemplate #
+# Mobsource_GradleTemplate_Android #
+================================
 Current Gradle Version: 'com.android.tools.build:gradle:0.12.2'
 
 
@@ -25,3 +26,4 @@ Configuration for Jacoco code coverage testing
 * Setup for Jacoco can be found in the scripts folder
 * Jacoco test coverage can be run with <code>./gradlew jacocoTestReport</code>
 * Results of jacoco code coverage testing: app/build/test-report/jacocoTestReport/html/index.html
+
