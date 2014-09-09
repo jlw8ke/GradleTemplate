@@ -16,17 +16,16 @@ android {
     }
 
     buildTypes {
-        release {
-            applicationIdSuffix ".debug"
-            runProguard false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            testCoverageEnabled false
-        }
         debug {
-            runProguard false
+            applicationIdSuffix ".debug"
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            runProguard false
             debuggable true
             testCoverageEnabled true
+        }
+        release {
+            runProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
@@ -54,7 +53,7 @@ dependencies {
     // ================== TESTING LIBRARIES ======================
     androidTestCompile 'junit:junit:4.11'
     androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.2.1'
-    androidTestCompile ('org.robolectric:robolectric:2.3') {
+    androidTestCompile('org.robolectric:robolectric:2.3') {
         exclude module: 'classworlds'
         exclude module: 'maven-artifact'
         exclude module: 'maven-artifact-manager'
