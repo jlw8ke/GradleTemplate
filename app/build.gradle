@@ -34,9 +34,6 @@ android {
         disable 'InvalidPackage'
     }
 
-    productFlavors {
-    }
-
     packagingOptions {
         exclude 'META-INF/LICENSE.txt'
         exclude 'LICENSE.txt'
